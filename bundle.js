@@ -106,7 +106,7 @@ eval("{\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleEle
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadAbout)\n/* harmony export */ });\n// about.js\nfunction loadAbout() {\n    const container = document.createElement(\"div\");\n\n    const heading = document.createElement(\"h1\");\n    heading.textContent = \"This is the About Page\";\n\n    container.appendChild(heading);\n\n    return container; // ✅ return a DOM node\n}\n\n\n//# sourceURL=webpack://restrauntpage/./src/about.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadAbout)\n/* harmony export */ });\n// about.js\nfunction loadAbout() {\n    const container = document.createElement(\"div\"); // New div\n    const heading = document.createElement(\"h1\");\n    heading.textContent = \"This is the About Page\";\n    container.appendChild(heading); // append inside the new div\n    return container; // return the new div\n}\n\n\n//# sourceURL=webpack://restrauntpage/./src/about.js?\n}");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadHome)\n/* harmony export */ });\nfunction loadHome() {\n\n    const content = document.getElementById(\"content\");\n\n    const heading = document.createElement(\"h1\");\n\n    heading.textContent = \"This is the Home Page\"\n\n    content.appendChild(heading);\n}\n\n//# sourceURL=webpack://restrauntpage/./src/home.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadHome)\n/* harmony export */ });\n// home.js\nfunction loadHome() {\n    const container = document.createElement(\"div\"); // New div\n    const heading = document.createElement(\"h1\");\n    heading.textContent = \"This is the Home Page\";\n    container.appendChild(heading); // append inside the new div\n    return container; // return the new div\n}\n\n\n//# sourceURL=webpack://restrauntpage/./src/home.js?\n}");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _about_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./about.js */ \"./src/about.js\");\n\n\n\n\n\n\nfunction clearContent() {\n    const content = document.getElementById('content');\n    content.innerHTML = '';\n\n}\n\nfunction loadPage(pageFn) {\n  clearContent();\n  const content = document.getElementById('content');\n  content.appendChild(pageFn());\n}\n\n// Default on load\nloadPage(_home_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n// Add listeners to buttons\ndocument.getElementById('home').addEventListener('click', () => loadPage(_home_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]));\ndocument.getElementById('menu').addEventListener('click', () => loadPage(_menu_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]));\ndocument.getElementById('about').addEventListener('click', () => loadPage(_about_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]));\n\n//# sourceURL=webpack://restrauntpage/./src/index.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _about_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./about.js */ \"./src/about.js\");\n\n\n\n\n\n\nfunction clearContent() {\n    const content = document.getElementById('content');\n    content.innerHTML = '';\n\n}\n\nfunction loadPage(pageFn) {\n  clearContent();\n  const content = document.getElementById('content');\n  content.appendChild(pageFn());\n}\n\n\n\n// Add listeners to buttons\ndocument.getElementById('home').addEventListener('click', () => loadPage(_home_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]));\ndocument.getElementById('menu').addEventListener('click', () => loadPage(_menu_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]));\ndocument.getElementById('about').addEventListener('click', () => loadPage(_about_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]));\n\n// Default on load\nloadPage(_home_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n//# sourceURL=webpack://restrauntpage/./src/index.js?\n}");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _st
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\n// about.js\nfunction loadMenu() {\n    const container = document.createElement(\"div\");\n\n    const heading = document.createElement(\"h1\");\n    heading.textContent = \"This is the Menu Page\";\n\n    container.appendChild(heading);\n\n    return container; // ✅ return a DOM node\n}\n\n\n//# sourceURL=webpack://restrauntpage/./src/menu.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\n// about.js\nfunction loadMenu() {\n    const container = document.createElement(\"div\"); // New div\n    const heading = document.createElement(\"h1\");\n    heading.textContent = \"This is the Menu Page\";\n    container.appendChild(heading); // append inside the new div\n    return container; // return the new div\n}\n\n\n//# sourceURL=webpack://restrauntpage/./src/menu.js?\n}");
 
 /***/ }),
 
